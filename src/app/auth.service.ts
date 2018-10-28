@@ -20,7 +20,6 @@ export class AuthService {
       (user) => {
         if (user) {
           this.userDetails = user;
-          console.log(user);
         } else {
           this.userDetails = null;
         }
@@ -64,18 +63,15 @@ export class AuthService {
   }
 
 
-  isLoggedIn() {
-    if (this.userDetails == null) {
-      return false;
-    } else {
-      console.log('true');
-      return true;
-    }
-  }
-
-
-  logout() {
-    this._firebaseAuth.auth.signOut()
-      .then(() => this.router.navigate(['/']));
+  isLoggedIn(): any {
+    return this._firebaseAuth.authState.subscribe(user => {
+      if (user) {
+        this.userDetails = user;
+        return true;
+      } else {
+        this.userDetails = null;
+        return false;
+      }
+    });
   }
 }
