@@ -20,7 +20,6 @@ export class FirebaseService {
 
   async pushEvent(data: any) {
     try {
-      console.log('service', data);
       const newItem = {
         start: data.start,
         end: data.end,
@@ -29,16 +28,13 @@ export class FirebaseService {
         id: data.id,
         color: '#' + Math.floor(Math.random() * 16777215).toString(16)
       };
-      const dat = await this.db.list('events').push(newItem);
-      console.log(dat);
+      await this.db.list('events').push(newItem);
     } catch (error) {
-      console.log(error);
+      console.error(error);
     }
   }
 
   removeEvent(id: any) {
-    console.log(id, 'DATA');
-    console.log('NOT WORKING');
     return this.db.database.ref(`/events`).child(id).remove();
   }
 

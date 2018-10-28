@@ -1,6 +1,8 @@
 <div class="base-container">
   <div class="base-header z-depth-3">TEGELHUSET</div>
-  <div class="base-nav"></div>
+  <div class="base-nav">
+    <div (click)="logout()" class="logoutButton" *ngIf="isLoggedIn">LOGOUT</div>
+  </div>
   <div class="base-main">
     <router-outlet></router-outlet>
   </div>

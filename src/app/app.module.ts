@@ -19,15 +19,6 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { LoginComponent } from './login/login.component';
 import { AngularFireAuthModule } from 'angularfire2/auth';
 
-export const firebaseCredentials = {
-  apiKey: 'AIzaSyBheISbFYtGXXvq89KT8y20DJmvMT8SzVk',
-  authDomain: 'tegelv2.firebaseapp.com',
-  databaseURL: 'https://tegelv2.firebaseio.com',
-  projectId: 'tegelv2',
-  storageBucket: 'tegelv2.appspot.com',
-  messagingSenderId: '1053223905500'
-};
-
 @NgModule({
   declarations: [
     AppComponent,
@@ -47,7 +38,7 @@ export const firebaseCredentials = {
     }),
     EffectsModule.forRoot([FirebaseEffects]),
     !environment.production ? StoreDevtoolsModule.instrument() : [],
-    AngularFireModule.initializeApp(firebaseCredentials),
+    AngularFireModule.initializeApp(environment.firebaseCredentials),
     AngularFireDatabaseModule,
     AngularFireAuthModule
   ],

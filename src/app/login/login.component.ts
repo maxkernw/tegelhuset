@@ -20,7 +20,7 @@ export class LoginComponent implements OnInit {
 
   signInWithTwitter() {
     this.authService.signInWithTwitter()
-      .then((res) => {
+      .then(() => {
         this.router.navigate(['calendar']);
       })
       .catch((err) => console.log(err));
@@ -29,7 +29,7 @@ export class LoginComponent implements OnInit {
 
   signInWithFacebook() {
     this.authService.signInWithFacebook()
-      .then((res) => {
+      .then(() => {
         this.router.navigate(['calendar']);
       })
       .catch((err) => console.log(err));
@@ -38,7 +38,7 @@ export class LoginComponent implements OnInit {
 
   signInWithGoogle() {
     this.authService.signInWithGoogle()
-      .then((res) => {
+      .then(() => {
         this.router.navigate(['calendar']);
       })
       .catch((err) => console.log(err));
@@ -46,7 +46,7 @@ export class LoginComponent implements OnInit {
 
   signInWithGithub() {
     this.authService.signInWithGithub()
-      .then((res) => {
+      .then(() => {
         this.router.navigate(['calendar']);
       })
       .catch((err) => console.log(err));
@@ -62,11 +62,12 @@ export class LoginComponent implements OnInit {
       .catch((err) => console.log('error: ' + err));
   }
 
-
-
   ngOnInit() {
-    console.log(this.authService.isLoggedIn());
-    this.router.navigate(['calendar']);
+    this.authService.user.subscribe(res => {
+      if (res) {
+        this.router.navigate(['/calendar']);
+      }
+    });
   }
 
 }

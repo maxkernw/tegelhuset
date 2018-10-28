@@ -13,6 +13,7 @@ import {
 import { Store } from '@ngrx/store';
 import { FetchEvents, PushEvent, RemoveEvent } from '../store/actions/firebase.actions';
 import { AuthService } from '../auth.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-calendar',
@@ -40,9 +41,14 @@ export class CalendarComponent implements OnInit {
       }
     }
   ];
-  constructor(private store: Store<reducer.State>, private authService: AuthService) { }
+  constructor(private store: Store<reducer.State>, private authService: AuthService, private router: Router) { }
 
   ngOnInit() {
+    this.authService.user.subscribe(res => {
+      if (!res) {
+        this.router.navigate(['']);
+      }
+    });
     this.store.select('events').subscribe(event => {
       this.addEvent(event);
     });
@@ -147,7 +153,6 @@ export class CalendarComponent implements OnInit {
   }
 
   dayClicked({ date, events }: { date: Date, events: any[] }) {
-    console.log('clicked', events);
     if (isSameMonth(date, this.viewDate)) {
       if ((isSameDay(this.viewDate, date) && this.activeDayIsOpen === true)
         || events.length === 0) {
