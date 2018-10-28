@@ -1,0 +1,36 @@
+.button-view {
+    width: 100%;
+}
+.main__body {
+    margin-top: 25%;
+}
+button {
+    color:white;
+    background-color: #ef4d4d;
+}
+
+label {
+    color:#ef4d4d;
+
+}
+button:hover {
+    background-color: black;
+}
+ /* label focus color */
+ .input-field input[type=text]:focus + label {
+    color: #000;
+}
+/* label underline focus color */
+  input[type=password]:focus {
+    border-bottom: 1px solid #000;
+    box-shadow: 0 1px 0 0 #000;
+  }
+
+  input {
+      color:white;
+  }
+
+  input:not([type]):focus:not([readonly]), input[type=text]:not(.browser-default):focus:not([readonly]), input[type=password]:not(.browser-default):focus:not([readonly]), input[type=email]:not(.browser-default):focus:not([readonly]), input[type=url]:not(.browser-default):focus:not([readonly]), input[type=time]:not(.browser-default):focus:not([readonly]), input[type=date]:not(.browser-default):focus:not([readonly]), input[type=datetime]:not(.browser-default):focus:not([readonly]), input[type=datetime-local]:not(.browser-default):focus:not([readonly]), input[type=tel]:not(.browser-default):focus:not([readonly]), input[type=number]:not(.browser-default):focus:not([readonly]), input[type=search]:not(.browser-default):focus:not([readonly]), textarea.materialize-textarea:focus:not([readonly]) {
+    border-bottom: 1px solid #ef4d4d;
+    box-shadow: 0 1px 0 0 #ef4d4d;  
+  }

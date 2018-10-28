@@ -1,0 +1,51 @@
+
+  .base-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+  
+  
+  @media (min-width: 768px) {
+    .base-container {
+      display: grid;
+      grid-template-columns: 200px 1fr 200px;
+      grid-template-rows: auto 1fr auto;
+  
+    }
+  }
+  
+  .base-header {
+    grid-column: span 3;
+    padding: 15px;
+    font-size: 1.4em;
+    background-color: #3c3b38;
+    color: #ef4d4d;
+  }
+  
+  .base-main {
+    flex: 1;
+    padding: 20px;
+    background-color: #2d2d2a;
+  }
+  
+  .base-nav {
+    background-color: #2d2d2a;
+  }
+   
+  aside {
+      background-color: #2d2d2a
+  }
+  
+  footer {
+    grid-column: span 3;
+    text-align: center;
+    font-size: 1.4em;
+    color: white;
+  }
+  
+  h1 {
+    margin-bottom: 1em;
+    font-size: 1.3em;
+    font-weight: bold;
+  }

@@ -1,0 +1,92 @@
+.picker {
+    width: 100%;
+    display: grid;
+    grid-auto-rows: auto;
+    grid-template-columns: auto auto auto;
+    text-align: center;
+  }
+  
+  .calendartable {
+    border: 1px solid black;
+    padding: 10px;
+    margin: 10px;
+    justify-content: center;
+  }
+  
+  .date-title {
+    width: 100%;
+  }
+  
+  .grid-form {
+    width: 100%;
+    display: grid;
+    grid-auto-rows: auto;
+    grid-template-columns: auto;
+    align-items: center;
+  }
+  .form-group {
+    align-self: center;
+    justify-self: center;
+  }
+
+  .calendar-wrapper {
+      background-color: #ececec;
+  }
+
+
+  .cal-cell-row:hover, .ng-star-inserted:hover {
+      background: red;
+  }
+
+  .date-title {
+      text-align: center;
+      background-color: #2d2d2a;
+      color: #ef4d4d;
+  }
+
+  .hidden-col {
+      background: #2d2d2a;
+  }
+
+  .calendar-selection-container {
+      background:yellow;
+  }
+
+button, .btn {
+    color:white;
+    background-color: #ef4d4d;
+}
+
+label {
+    color:#ef4d4d;
+
+}
+button:hover {
+    background-color: black;
+}
+ /* label focus color */
+ .input-field input[type=text]:focus + label {
+    color: #000;
+}
+/* label underline focus color */
+  input[type=password]:focus {
+    border-bottom: 1px solid #000;
+    box-shadow: 0 1px 0 0 #000;
+  }
+
+  input {
+      color:white;
+  }
+
+  input:not([type]):focus:not([readonly]), input[type=text]:not(.browser-default):focus:not([readonly]), input[type=password]:not(.browser-default):focus:not([readonly]), input[type=email]:not(.browser-default):focus:not([readonly]), input[type=url]:not(.browser-default):focus:not([readonly]), input[type=time]:not(.browser-default):focus:not([readonly]), input[type=date]:not(.browser-default):focus:not([readonly]), input[type=datetime]:not(.browser-default):focus:not([readonly]), input[type=datetime-local]:not(.browser-default):focus:not([readonly]), input[type=tel]:not(.browser-default):focus:not([readonly]), input[type=number]:not(.browser-default):focus:not([readonly]), input[type=search]:not(.browser-default):focus:not([readonly]), textarea.materialize-textarea:focus:not([readonly]) {
+    border-bottom: 1px solid #ef4d4d;
+    box-shadow: 0 1px 0 0 #ef4d4d;  
+  }
+
+  .grid-form {
+      background-color: #2d2d2a;
+  }
+
+  .form-group {
+      width: 100%;
+  }

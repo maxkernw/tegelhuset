@@ -29,7 +29,10 @@
             "styles": [
               "src/styles.scss"
             ],
-            "scripts": []
+            "scripts": [
+              "./node_modules/jquery/dist/jquery.min.js",
+              "./node_modules/materialize-css/dist/js/materialize.js"
+            ]
           },
           "configurations": {
             "production": {
@@ -135,5 +138,8 @@
       }
     }
   },
-  "defaultProject": "tegelhuset"
+  "defaultProject": "tegelhuset",
+  "cli": {
+    "defaultCollection": "@ngrx/schematics"
+  }
 }
