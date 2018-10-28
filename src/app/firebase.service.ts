@@ -29,7 +29,6 @@ export class FirebaseService {
         id: data.id,
         color: '#' + Math.floor(Math.random() * 16777215).toString(16)
       };
-      console.log('wtf');
       const dat = await this.db.list('events').push(newItem);
       console.log(dat);
     } catch (error) {
@@ -37,8 +36,10 @@ export class FirebaseService {
     }
   }
 
-  removeEvent(data: any) {
-    return this.db.database.ref(`events`).child(data.event.id).remove();
+  removeEvent(id: any) {
+    console.log(id, 'DATA');
+    console.log('NOT WORKING');
+    return this.db.database.ref(`/events`).child(id).remove();
   }
 
 }

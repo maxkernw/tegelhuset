@@ -6,7 +6,7 @@
       </div>
     </div>
   </div>
-  <div [ngSwitch]="view">
+  <div [ngSwitch]="view" class="calendar-selection-container">
     <mwl-calendar-month-view *ngSwitchCase="'month'" [viewDate]="viewDate" [events]="events" [refresh]="refresh"
       [activeDayIsOpen]="activeDayIsOpen" (dayClicked)="dayClicked($event.day)" (eventClicked)="handleEvent('Clicked', $event)"
       (eventTimesChanged)="eventTimesChanged($event)">
@@ -50,3 +50,38 @@
     </form>
   </div>
 </div>
+
+
+<table class="table table-bordered">
+
+  <thead>
+    <tr>
+      <th>Grupp</th>
+      <th>Starts at</th>
+      <th>Ends at</th>
+      <th>Remove</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr *ngFor="let event of myevents; let index = index">
+      <td>
+        <input type="text" class="form-control" [(ngModel)]="event.title" (keyup)="refresh.next()">
+      </td>
+
+      <td>
+        <input class="form-control" type="text" mwlFlatpickr [(ngModel)]="event.start" (ngModelChange)="refresh.next()"
+          dateFormat="Y-m-dTH:i" altFormat="F j, Y H:i" placeholder="Not set">
+      </td>
+      <td>
+        <input class="form-control" type="text" mwlFlatpickr [(ngModel)]="event.end" (ngModelChange)="refresh.next()"
+          dateFormat="Y-m-dTH:i" altFormat="F j, Y H:i" placeholder="Not set">
+      </td>
+      <td>
+        <button class="btn btn-danger" (click)="remove(event)">
+          Delete
+        </button>
+      </td>
+    </tr>
+  </tbody>
+</table>
