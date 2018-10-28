@@ -58,20 +58,12 @@ export class AuthService {
   }
 
   signInRegular(email, password) {
-
+    this._firebaseAuth.auth.setPersistence(firebase.auth.Auth.Persistence.SESSION);
     return this._firebaseAuth.auth.signInWithEmailAndPassword(email, password);
   }
 
 
   isLoggedIn(): any {
-    return this._firebaseAuth.authState.subscribe(user => {
-      if (user) {
-        this.userDetails = user;
-        return true;
-      } else {
-        this.userDetails = null;
-        return false;
-      }
-    });
+    return this.userDetails ? true : false;
   }
 }
