@@ -1,0 +1,73 @@
+{
+  "configVersion": 1,
+  "index": "/tegelhuset/index.html",
+  "assetGroups": [
+    {
+      "name": "app",
+      "installMode": "prefetch",
+      "updateMode": "prefetch",
+      "urls": [
+        "/tegelhuset/favicon.ico",
+        "/tegelhuset/index.html",
+        "/tegelhuset/main.5c0bef64fa3420621cc6.js",
+        "/tegelhuset/polyfills.c6871e56cb80756a5498.js",
+        "/tegelhuset/runtime.ec2944dd8b20ec099bf3.js",
+        "/tegelhuset/scripts.c9003af45cb9829c75ca.js",
+        "/tegelhuset/styles.12d4336c7ea52ad6c686.css"
+      ],
+      "patterns": []
+    },
+    {
+      "name": "assets",
+      "installMode": "lazy",
+      "updateMode": "prefetch",
+      "urls": [
+        "/tegelhuset/assets/icons/icon-128x128.png",
+        "/tegelhuset/assets/icons/icon-144x144.png",
+        "/tegelhuset/assets/icons/icon-152x152.png",
+        "/tegelhuset/assets/icons/icon-192x192.png",
+        "/tegelhuset/assets/icons/icon-384x384.png",
+        "/tegelhuset/assets/icons/icon-512x512.png",
+        "/tegelhuset/assets/icons/icon-72x72.png",
+        "/tegelhuset/assets/icons/icon-96x96.png"
+      ],
+      "patterns": []
+    }
+  ],
+  "dataGroups": [],
+  "hashTable": {
+    "/tegelhuset/assets/icons/icon-128x128.png": "fc1988869fa3386145d60426d422966239b0625e",
+    "/tegelhuset/assets/icons/icon-144x144.png": "32471288805abd47698fccc180c63701d7c2ad24",
+    "/tegelhuset/assets/icons/icon-152x152.png": "4ebba8c14d166fa21173636c22795b4966d9d558",
+    "/tegelhuset/assets/icons/icon-192x192.png": "a185f95171d80bc808c4d3a70e02ebf5f8a8d4fc",
+    "/tegelhuset/assets/icons/icon-384x384.png": "5d4673daa8fddb4d2252b1713f29c1774c260aa4",
+    "/tegelhuset/assets/icons/icon-512x512.png": "f977770a355d9d4595df8fb3066703a8e8c327bd",
+    "/tegelhuset/assets/icons/icon-72x72.png": "ca5ee15fc2188fbdc9a3ee849bb17bed7cd7d539",
+    "/tegelhuset/assets/icons/icon-96x96.png": "f81122c3f643debc25b0747523d3188e238d1dde",
+    "/tegelhuset/favicon.ico": "9e2f962e3763097efed5d61ef222d19d29a899e8",
+    "/tegelhuset/index.html": "598d76d721ef4f40184d533df9a8769cd75f7b81",
+    "/tegelhuset/main.5c0bef64fa3420621cc6.js": "f37fdad0739fd201795ae2cc98cbdd2cb3216b35",
+    "/tegelhuset/polyfills.c6871e56cb80756a5498.js": "ce68d153e9b9b6d26b625069c0ee99ae09c6f255",
+    "/tegelhuset/runtime.ec2944dd8b20ec099bf3.js": "b62956c2192bfe5516d6374e753773901ed50ec5",
+    "/tegelhuset/scripts.c9003af45cb9829c75ca.js": "8a2ac031b14128b13c56c93b2f250935976125f9",
+    "/tegelhuset/styles.12d4336c7ea52ad6c686.css": "625f94855b579684e416385b8dc9d35f38f35c04"
+  },
+  "navigationUrls": [
+    {
+      "positive": true,
+      "regex": "^\\/.*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*\\.[^/]*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*__[^/]*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*__[^/]*\\/.*$"
+    }
+  ]
+}

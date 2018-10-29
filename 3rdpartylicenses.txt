@@ -487,6 +487,9 @@ MIT
 @ngrx/store
 MIT
 
+@angular/service-worker
+MIT
+
 @ngrx/effects
 MIT
 
