@@ -1,8 +1,8 @@
 {
   "name": "tegelhuset",
   "short_name": "tegelhuset",
-  "theme_color": "#1976d2",
-  "background_color": "#fafafa",
+  "theme_color": "#3c3b38",
+  "background_color": "#3c3b38",
   "display": "standalone",
   "scope": "/",
   "start_url": "/tegelhuset/",
