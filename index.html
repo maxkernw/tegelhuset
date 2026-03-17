@@ -1,18 +1,30 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <title>Tegelhuset</title>
-    <base href="/tegelhuset/" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="icon" type="image/x-icon" href="favicon.ico" />
-  </head>
-  <body>
-    <noscript
-      >Please enable JavaScript to continue using this application.</noscript
-    >
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Redirecting...</title>
     <script>
-      window.location.href = "https://maxkernw.github.io/tegel-gem/";
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.getRegistrations().then(registrations => {
+                for (let registration of registrations) {
+                    registration.unregister();
+                }
+            });
+        }
+
+        if ('caches' in window) {
+            caches.keys().then(names => {
+                for (let name of names) caches.delete(name);
+            });
+        }
+
+        window.localStorage.clear();
+        window.sessionStorage.clear();
+
+        window.location.href = "https://maxkernw.github.io/tegel-gem/";
     </script>
-  </body>
+    <meta http-equiv="refresh" content="0; url=https://maxkernw.github.io/tegel-gem/">
+</head>
+<body>
+    <p>This page has moved. <a href="https://maxkernw.github.io/tegel-gem/">Click here if you are not redirected.</a></p>
+</body>
 </html>
